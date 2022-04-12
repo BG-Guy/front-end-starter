@@ -1,0 +1,28 @@
+.max-width-container {
+  max-width: $screen-xl;
+  padding: 0 1rem;
+}
+
+body {
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li,
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 100%;
+}
