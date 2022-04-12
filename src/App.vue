@@ -1,21 +1,17 @@
 <template class="app">
-  <!-- <AppHeader /> -->
-  <Hero />
-  <!-- <Resume /> -->
-  <Portfolio />
+  <AppHeader />
+  <Homepage />
+  <Footer />
 </template>
 
 <script>
 import AppHeader from "./components/app-header.vue";
-import Hero from "./components/hero.vue";
-import Resume from "./components/resume.vue";
-import Portfolio from "./components/portfolio.vue";
+import Homepage from "./components/homepage.vue";
 export default {
   components: {
-    // AppHeader,
-    Hero,
-    Portfolio,
-    // Resume,
+    AppHeader,
+    Homepage,
+    Footer,
   },
 
   data() {},
