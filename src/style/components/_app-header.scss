@@ -2,21 +2,42 @@
   width: 100vw;
   background-color: $clr1;
 
-  nav {
-    margin: auto;
-    display: flex;
+  .navbar {
+    & > * {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
     .logo {
-      align-self: flex-start;
       flex: 1;
-      text-align: start;
     }
     .nav-links {
-      display: flex;
       width: 50%;
-      align-self: flex-end;
+      height: 100%;
+      gap: 30px;
+      justify-content: flex-end;
+      @include for-mobile-layout {
+        display: none;
+      }
+      li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &:hover {
+          box-shadow: 0px 3px 0px 0px $active-link-clr;
+          cursor: pointer;
+          color: $active-link-clr;
+        }
+      }
     }
-    li {
-      padding: rem(16px);
+    .hamburger-menu-icon {
+      display: none;
+      @include for-mobile-layout {
+        fill: white;
+        display: flex;
+      }
+    }
+    & li {
       text-align: center;
       color: white;
     }

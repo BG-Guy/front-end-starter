@@ -1,28 +1,12 @@
 .max-width-container {
-  max-width: $screen-xl;
+  @include for-mobile-layout {
+    max-width: $screen-m;
+  }
+  @include for-tablet-layout {
+    max-width: $screen-l;
+  }
+  @include for-desktop-layout {
+    max-width: $screen-xl;
+  }
   padding: 0 1rem;
-}
-
-body {
-  margin: 0px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-li,
-ul {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-img {
-  width: 100%;
 }

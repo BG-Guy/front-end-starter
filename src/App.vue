@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import AppHeader from "./components/app-header.vue";
-import Homepage from "./components/homepage.vue";
-import AppFooter from "./components/app-footer.vue";
+import AppHeader from "./components/Header.vue";
+import Homepage from "./components/Home.vue";
+import AppFooter from "./components/Footer.vue";
 export default {
   components: {
     AppHeader,

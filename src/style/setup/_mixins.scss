@@ -26,16 +26,88 @@
     padding: rem(48px) rem(24px);
     width: rem(200px);
     &:hover {
-      background-color: $clr1;
-      color: $clr3;
+      background-color: $bg;
+      color: $clr;
     }
   } @else if $type == light {
-    background-color: $clr3;
-    color: $clr2;
+    background-color: $bg;
+    color: $clr;
     padding: rem(24px) rem(12px);
     &:hover {
       background-color: $clr1;
       color: $clr3;
     }
+  }
+}
+
+@mixin for-mobile-layout {
+  @media (max-width: $screen-m) {
+    @content;
+  }
+}
+
+@mixin for-tablet-layout {
+  @media (min-width: $screen-m) {
+    @content;
+  }
+}
+
+@mixin for-desktop-layout {
+  @media (min-width: $screen-l) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin img($type: regular, $aspect-ratio: calc(9 / 16)) {
+  position: relative;
+  overflow: hidden;
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: calc($height / $width) * 100%;
+  }
+
+  > img {
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: $aspect-ratio;
+    @if ($type == avatar) {
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+    }
+    @if ($type == poster) {
+      aspect-ratio: 16/9;
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-wrap-grow {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex: 1;
+    gap: 30px;
   }
 }
