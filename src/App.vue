@@ -1,6 +1,6 @@
 <template class="app">
   <AppHeader />
-  <Homepage />
+  <RouterView />
   <AppFooter />
 </template>
 
@@ -16,6 +16,9 @@ export default {
   },
 
   data() {},
+  created() {
+    this.$store.dispatch({ type: "loadGigs" });
+  },
 };
 </script>
 

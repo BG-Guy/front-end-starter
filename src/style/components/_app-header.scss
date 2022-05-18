@@ -19,10 +19,12 @@
       @include for-mobile-layout {
         display: none;
       }
-      li {
+      li,
+      a {
         height: 100%;
         display: flex;
         align-items: center;
+        color: white;
         &:hover {
           box-shadow: 0px 3px 0px 0px $active-link-clr;
           cursor: pointer;

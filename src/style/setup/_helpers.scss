@@ -10,3 +10,66 @@
   }
   padding: 0 1rem;
 }
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  height: rem(350px);
+  width: rem(250px);
+  border: 1px solid black;
+  border-radius: 4px;
+  position: fixed;
+  .header {
+    width: 100%;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-family: AvenirRoman;
+    text-align: center;
+  }
+
+  input {
+    padding: 0.5rem 0;
+    flex: 1;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  .login-btn {
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}

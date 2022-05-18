@@ -17,6 +17,16 @@ ul {
   margin: 0px;
 }
 
+button {
+  border: none;
+}
+
+input {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -88,9 +98,4 @@ nav.hamburger-menu {
   .social-icons {
     gap: 30px;
   }
-}
-
-div,
-li {
-  border: 1px solid black;
 }
